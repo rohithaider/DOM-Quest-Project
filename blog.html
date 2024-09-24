@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog Page</title>
+    <!-- tailwind integration -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font-lexend {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="font-lexend">
+    <header class="sticky top-0">
+      <nav class="bg-[#F9F7F3] pb-16">
+        <div class="container mx-auto bg-[#F9F7F3] navbar bg-base-100">
+          <div class="navbar-start">
+            <a id="home-btn" class="btn bg-[#B4F461] lg:w-28">Home</a>
+          </div>
+          <div class="navbar-center lg:flex space-x-2">
+            <img class="w-2/12" src="./assets/logo.png" alt="" />
+            <h1>Donate Bangladesh</h1>
+          </div>
+          <div class="navbar-end space-x-1 lg:space-x-2">
+            <h1>About Us</h1>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <!-- accordion -->
+      <div class="container mx-auto mt-8 space-y-4">
+        <h1 class="text-center">FAQ</h1>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is the Document Object Model (DOM)?
+          </div>
+          <div class="collapse-content">
+            <p>
+              The Document Object Model (DOM) is a programming interface for web
+              documents. It represents the structure of an HTML or XML document
+              as a tree of objects, allowing scripts (like JavaScript) to
+              dynamically access and manipulate the content, structure, and
+              style of the document.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you select an element from the DOM?
+          </div>
+          <div class="collapse-content">
+            <p>When I want to select elements from the Document Object Model (DOM) in JavaScript, I use several methods based on how the elements are identified in the HTML structure. For instance, I often use `document.getElementById()` to select a single element by its unique `id`, like `document.getElementById("elementId")`. If I need to select multiple elements that share the same class, I utilize `document.getElementsByClassName()`, which gives me a live HTMLCollection of all elements with that class, such as `document.getElementsByClassName("className")`. I also use `document.getElementsByTagName()` to retrieve all elements of a specific type, like `document.getElementsByTagName("div")` for all `<div>` elements. For more complex selections, I prefer `document.querySelector()`, which allows me to use CSS selectors to select the first matching element, while `document.querySelectorAll()` helps me get a NodeList of all matching elements, like `document.querySelectorAll("div.className")`. These methods are powerful tools for manipulating and accessing elements within the DOM.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation in the context of the DOM, and why is it
+            useful?
+          </div>
+          <div class="collapse-content">
+            <p>Event delegation is a technique in the DOM where a single event listener is attached to a parent element rather than multiple listeners on individual child elements. When an event occurs, it bubbles up from the target element to the parent, allowing the parent to handle the event. This approach is useful because it improves performance by reducing the number of event listeners, simplifies code management, and enables dynamic handling of elements added to the DOM after the initial event listener is set. Overall, event delegation leads to more efficient and cleaner code in managing events for multiple elements.</p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you manipulate an element's attributes and styles using the
+            DOM?
+          </div>
+          <div class="collapse-content">
+            <p>To manipulate an element's attributes and styles using the DOM, I can use various JavaScript methods. For attributes, I use `element.setAttribute("attributeName", "value")` to change an attribute and `element.getAttribute("attributeName")` to retrieve it. For styles, I can directly modify the `style` property, such as `element.style.color = "red"` to change the text color. Additionally, I can use `element.classList.add("className")` or `element.classList.remove("className")` to manage CSS classes. This flexibility allows me to dynamically change both the appearance and behavior of elements on the page.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer></footer>
+    <script src="./js/blog.js"></script>
+  </body>
+</html>
