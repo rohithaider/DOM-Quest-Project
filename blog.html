@@ -41,6 +41,7 @@
         </div>
       </nav>
     </header>
+    <!-- ! -->
     <main>
       <!-- accordion -->
       <div class="container mx-auto mt-8 space-y-4">
@@ -52,11 +53,7 @@
           </div>
           <div class="collapse-content">
             <p>
-              The Document Object Model (DOM) is a programming interface for web
-              documents. It represents the structure of an HTML or XML document
-              as a tree of objects, allowing scripts (like JavaScript) to
-              dynamically access and manipulate the content, structure, and
-              style of the document.
+              In JavaScript, Document Object Model is a tree like structure where it shows the each html elements in node and structures them as tree. In Document Object Model, each element is represented as a object.
             </p>
           </div>
         </div>
@@ -66,7 +63,8 @@
             How do you select an element from the DOM?
           </div>
           <div class="collapse-content">
-            <p>When I want to select elements from the Document Object Model (DOM) in JavaScript, I use several methods based on how the elements are identified in the HTML structure. For instance, I often use `document.getElementById()` to select a single element by its unique `id`, like `document.getElementById("elementId")`. If I need to select multiple elements that share the same class, I utilize `document.getElementsByClassName()`, which gives me a live HTMLCollection of all elements with that class, such as `document.getElementsByClassName("className")`. I also use `document.getElementsByTagName()` to retrieve all elements of a specific type, like `document.getElementsByTagName("div")` for all `<div>` elements. For more complex selections, I prefer `document.querySelector()`, which allows me to use CSS selectors to select the first matching element, while `document.querySelectorAll()` helps me get a NodeList of all matching elements, like `document.querySelectorAll("div.className")`. These methods are powerful tools for manipulating and accessing elements within the DOM.</p>
+            <p>I use a variety of methods in JavaScript to select elements from the DOM. While `document.getElementsByClassName()` finds many items that share the same class, `document.getElementById()` selects an element based on its distinct `id}. For tag-based selections, `document.getElementsByTagName()` finds elements by their type. `document.querySelector()` chooses the first element that matches a CSS selector when I require more intricate selections. `document.querySelectorAll()` returns all matching elements as a NodeList if more than one element is required.
+            </p>
           </div>
         </div>
         <div class="collapse collapse-arrow bg-base-200">
@@ -76,7 +74,8 @@
             useful?
           </div>
           <div class="collapse-content">
-            <p>Event delegation is a technique in the DOM where a single event listener is attached to a parent element rather than multiple listeners on individual child elements. When an event occurs, it bubbles up from the target element to the parent, allowing the parent to handle the event. This approach is useful because it improves performance by reducing the number of event listeners, simplifies code management, and enables dynamic handling of elements added to the DOM after the initial event listener is set. Overall, event delegation leads to more efficient and cleaner code in managing events for multiple elements.</p>
+            <p>In the DOM, event delegation refers to the practice of attaching a single event listener to a parent element as opposed to several listeners on separate child elements. An event is handled by the parent when it arises because it bubbles up from the target element to the parent. This method is helpful because it streamlines code management, increases performance by decreasing the number of event listeners, and allows for the dynamic handling of components that are introduced to the DOM after the initial event listener is set. In general, event delegation results in cleaner, more effective code when handling events for numerous parts.
+            </p>
           </div>
         </div>
         <div class="collapse collapse-arrow bg-base-200">
@@ -86,7 +85,8 @@
             DOM?
           </div>
           <div class="collapse-content">
-            <p>To manipulate an element's attributes and styles using the DOM, I can use various JavaScript methods. For attributes, I use `element.setAttribute("attributeName", "value")` to change an attribute and `element.getAttribute("attributeName")` to retrieve it. For styles, I can directly modify the `style` property, such as `element.style.color = "red"` to change the text color. Additionally, I can use `element.classList.add("className")` or `element.classList.remove("className")` to manage CSS classes. This flexibility allows me to dynamically change both the appearance and behavior of elements on the page.</p>
+            <p>I can use different JavaScript techniques to change the styles and attributes of an element using the DOM. For attributes, I use `element.setAttribute("attributeName", "value")` to alter an attribute and `element.getAttribute("attributeName")` to retrieve it. I may directly alter the `style` property for styles, for example, `element.style.color = "red"} to alter the text's color. To manage CSS classes, I may also use `element.classList.add("className")` or `element.classList.remove("className")`. I can dynamically alter an element's look and behavior on the page thanks to its flexibility.
+            </p>
           </div>
         </div>
       </div>

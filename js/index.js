@@ -28,11 +28,11 @@ const getTextValueById = function(id){
 
 const validationCheck = function(value){
     const newValue = parseFloat(value);
-    if(typeof newValue ==='number' && !isNaN(newValue)){
+    if(typeof newValue ==='number' && !isNaN(newValue) && newValue>0){
         return true;
     }
     else{
-        alert("Please input number only")
+        alert("Please input amount greater than zero")
         return;
     }
 
