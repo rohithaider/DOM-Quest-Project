@@ -47,7 +47,8 @@ const getCurrentDate = function(){
     const minutes = currentDate.getMinutes();        // Minutes (0-59)
     const seconds = currentDate.getSeconds(); 
 
-    const formattedTime =  `Date: ${month}-${day}-${year} ${hours}:${minutes}:${seconds} GMT +0600 (Bangladesh Standard Time)`;
+    // const formattedTime =  `Date: ${month}-${day}-${year} ${hours}:${minutes}:${seconds} GMT +0600 (Bangladesh Standard Time)`;
+    const formattedTime = `${currentDate}`;
     return formattedTime;
 
 
@@ -178,6 +179,7 @@ document.getElementById('history-btn').addEventListener('click',function(){
     document.getElementById('history-btn').classList.add('bg-[#B4F461]')
     document.getElementById('donation-form').classList.add('hidden');
     document.getElementById('history-form').classList.remove('hidden');
+    document.querySelector('footer').classList.add('hidden');
 
     
 
@@ -189,4 +191,5 @@ document.getElementById('donation-btn').addEventListener('click',function(){
     document.getElementById('donation-btn').classList.add('bg-[#B4F461]');
     document.getElementById('donation-form').classList.remove('hidden');
     document.getElementById('history-form').classList.add('hidden');
+    document.querySelector('footer').classList.remove('hidden');
 })
