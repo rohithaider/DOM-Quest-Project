@@ -40,14 +40,6 @@ const validationCheck = function(value){
 
 const getCurrentDate = function(){
     const currentDate = new Date();
-    const year = currentDate.getFullYear();          // 4-digit year (e.g., 2024)
-    const month = currentDate.getMonth() + 1;        // Month (0-11, so add 1)
-    const day = currentDate.getDate();               // Day of the month (1-31)
-    const hours = currentDate.getHours();            // Hours (0-23)
-    const minutes = currentDate.getMinutes();        // Minutes (0-59)
-    const seconds = currentDate.getSeconds(); 
-
-    // const formattedTime =  `Date: ${month}-${day}-${year} ${hours}:${minutes}:${seconds} GMT +0600 (Bangladesh Standard Time)`;
     const formattedTime = `${currentDate}`;
     return formattedTime;
 
