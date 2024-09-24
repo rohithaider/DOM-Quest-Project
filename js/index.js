@@ -49,7 +49,8 @@ const getCurrentDate = function(){
 
 
 //!Operation on card 1
-document.getElementById('card-1-btn').addEventListener('click',function(){
+document.getElementById('card-1-btn').addEventListener('click',function(e){
+    e.preventDefault();
     const inputValue = parseFloat(getInputById('input-1'));
     const cardBalance = parseFloat(getTextValueById('card-balance'));
     const mainBalance = parseFloat(getTextValueById('main-balance'));
@@ -67,7 +68,7 @@ document.getElementById('card-1-btn').addEventListener('click',function(){
             
             document.getElementById('card-balance').innerText=newCardBalance;
             document.getElementById('main-balance').innerText=newBalance;
-            newHTML = `<div class="card lg:card-side bg-base-100 shadow-xl">
+            newHTML = `<div class="card lg:card-side bg-base-100 shadow-xl border">
             <div class="card-body">
               <h2 class="card-title">${inputValue} Taka is Donated for Flood at Noakhali, Bangladesh</h2>
               <p>${currentDate}</p>
@@ -90,7 +91,8 @@ document.getElementById('card-1-btn').addEventListener('click',function(){
 })
 
 //!Operations on card 2
-document.getElementById('card-2-btn').addEventListener('click',function(){
+document.getElementById('card-2-btn').addEventListener('click',function(e){
+    e.preventDefault();
     const inputValue = parseFloat(getInputById('input-2'));
     const cardBalance = parseFloat(getTextValueById('card-balance-2'));
     const mainBalance = parseFloat(getTextValueById('main-balance'))
@@ -108,7 +110,7 @@ document.getElementById('card-2-btn').addEventListener('click',function(){
             document.getElementById('main-balance').innerText=newBalance;
 
             //adding to the history
-            newHTML = `<div class="card lg:card-side bg-base-100 shadow-xl">
+            newHTML = `<div class="card lg:card-side bg-base-100 shadow-xl border">
             <div class="card-body">
               <h2 class="card-title">${inputValue} Taka is Donated for Flood at Feni, Bangladesh</h2>
               <p>${currentDate}</p>
@@ -128,7 +130,8 @@ document.getElementById('card-2-btn').addEventListener('click',function(){
     }
 })
 //!Operations on card 3
-document.getElementById('card-3-btn').addEventListener('click',function(){
+document.getElementById('card-3-btn').addEventListener('click',function(e){
+    e.preventDefault();
     const inputValue = parseFloat(getInputById('input-3'));
     const cardBalance = parseFloat(getTextValueById('card-balance-3'));
     //getting current date and time from reusable function
@@ -146,9 +149,9 @@ document.getElementById('card-3-btn').addEventListener('click',function(){
             document.getElementById('main-balance').innerText=newBalance;
 
             //adding to the history
-            newHTML = `<div class="card lg:card-side bg-base-100 shadow-xl">
+            newHTML = `<div class="card lg:card-side bg-base-100 shadow-xl border">
             <div class="card-body">
-              <h2 class="card-title">${inputValue} Taka is Donated for Aid for the injured for the Quota Movement, Bangladesh</h2>
+              <h2 class="card-title">${inputValue} Taka is Donated for the injured people in the Quota Movement, Bangladesh</h2>
               <p>${currentDate}</p>
             </div>
           </div>`;
