@@ -85,6 +85,7 @@ document.getElementById('card-1-btn').addEventListener('click',function(){
 
         
             my_modal.showModal();
+            document.getElementById('input-1').value="";
         }
         else{
             document.getElementById('input-1').value="";
@@ -126,6 +127,7 @@ document.getElementById('card-2-btn').addEventListener('click',function(){
             
         
             my_modal.showModal();
+            document.getElementById('input-2').value="";
         }
         else{
             document.getElementById('input-2').value="";
@@ -161,6 +163,7 @@ document.getElementById('card-3-btn').addEventListener('click',function(){
           historyContainer.innerHTML+=newHTML;
         
             my_modal.showModal();
+            document.getElementById('input-3').value="";
         }
         else{
             document.getElementById('input-3').value="";
