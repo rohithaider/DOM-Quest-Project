@@ -38,7 +38,7 @@
           </div>
           <div class="navbar-end space-x-1 lg:space-x-2">
             <img src="./assets/coin.png" alt="" />
-            <h1>5500</h1>
+            <h1 id="main-balance">5500</h1>
             <p>BDT</p>
           </div>
         </div>
@@ -61,9 +61,9 @@
           </figure>
           <div class="card-body ">
             <div class="space-y-2">
-                <h2 class="card-title w-28 bg-[#F3F3F3] rounded-lg">
+                <h2 class="card-title max-w-32 bg-[#F3F3F3] rounded-lg">
                     <span><img src="./assets/coin.png" alt="" /></span>
-                    <span>0</span>BDT
+                    <span id="card-balance">0</span>BDT
                   </h2>
                   <p class="font-bold text-xl w-full">
                     Donate for Flood at Noakhali, Bangladesh
@@ -77,27 +77,12 @@
                     lives of those in need.
                   </p>
                   <input
+                    id="input-1"
                     type="text"
                     placeholder="Write Donation Amount"
                     class="input input-bordered input-md w-full max-w-3xl"
                   />
-                  <!-- !modal -->
-                  <dialog id="my_modal_1" class="modal">
-                    <div class="modal-box space-y-2">
-                      <h3 class="text-lg font-bold text-center">Congratulations!</h3>
-                      <div class="flex justify-center">
-                        <img src="./assets/coin.png" alt="">
-                      </div>
-                      <p class="py-4 text-center">You have donated for Humankind</p>
-                      <h1 class="text-center font-bold text-xl">Successfully!</h1>
-                      <div class="modal-action">
-                        <form method="dialog">
-                          <!-- if there is a button in form, it will close the modal -->
-                          <button class="btn">Close Confirmation</button>
-                        </form>
-                      </div>
-                    </div>
-                  </dialog>
+                  
                   <button id="card-1-btn" class="btn  w-full max-w-3xl bg-[#B4F461]">Donate Now</button>
             </div>
               
@@ -110,9 +95,9 @@
             </figure>
             <div class="card-body ">
               <div class="space-y-2">
-                  <h2 class="card-title w-28 bg-[#F3F3F3] rounded-lg">
+                  <h2 class="card-title max-w-32 bg-[#F3F3F3] rounded-lg">
                       <span><img src="./assets/coin.png" alt="" /></span>
-                      <span>600</span>BDT
+                      <span id="card-balance-2">600</span>BDT
                     </h2>
                     <p class="font-bold text-xl w-full">
                         Donate for Flood Relief in Feni,Bangladesh
@@ -126,6 +111,7 @@
                       lives of those in need.
                     </p>
                     <input
+                        id="input-2"
                       type="text"
                       placeholder="Write Donation Amount"
                       class="input input-bordered input-md w-full max-w-3xl"
@@ -142,9 +128,9 @@
             </figure>
             <div class="card-body ">
               <div class="space-y-2">
-                  <h2 class="card-title w-28 bg-[#F3F3F3] rounded-lg">
+                  <h2 class="card-title max-w-32 bg-[#F3F3F3] rounded-lg">
                       <span><img src="./assets/coin.png" alt="" /></span>
-                      <span>2400</span>BDT
+                      <span id="card-balance-3">2400</span>BDT
                     </h2>
                     <p class="font-bold text-xl w-full">
                         Aid for Injured in the Quota Movement
@@ -153,6 +139,7 @@
                         The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
                     </p>
                     <input
+                    id="input-3"
                       type="text"
                       placeholder="Write Donation Amount"
                       class="input input-bordered input-md w-full max-w-3xl"
@@ -162,6 +149,26 @@
                 
               </div>
             </div>
+            <!-- !modal -->
+            <dialog id="my_modal" class="modal">
+                <div class="modal-box space-y-2">
+                  <h3 class="text-lg font-bold text-center">Congratulations!</h3>
+                  <div class="flex justify-center">
+                    <img src="./assets/coin.png" alt="">
+                  </div>
+                  <p class="py-4 text-center">You have donated for Humankind</p>
+                  <h1 class="text-center font-bold text-xl">Successfully!</h1>
+                  <div class="modal-action">
+                    <div class="flex">
+                        <form method="dialog">
+                            <!-- if there is a button in form, it will close the modal -->
+                            <button class="btn">Close Confirmation</button>
+                          </form>
+                    </div>
+                    
+                  </div>
+                </div>
+              </dialog>
         </div>
       </div>
     </main>
