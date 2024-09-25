@@ -69,24 +69,26 @@ const calculateOperation = function(inputId,cardId,stringInput){
     //getting current date and time from reusable function
     const currentDate = getCurrentDate();
 
-    
+    //!checking if input amount is greater than main balance or not
     if(mainBalance<inputValue){
         alert("Donation amount can not be greater than main balance");
     }else{
-        if(validationCheck(inputValue)){
+        if(validationCheck(inputValue)){          //!if the validation check return true
             const newCardBalance = cardBalance+inputValue
             const newBalance = mainBalance-inputValue;
 
+            //!if balance is equal to zero, then disabling buttons
             if(newBalance===0){
                 document.getElementById('card-1-btn').disabled=true;
                 document.getElementById('card-2-btn').disabled=true;
                 document.getElementById('card-3-btn').disabled=true;
             }
 
-            
+            //!assigning new values to the card balance and main balance
             document.getElementById(cardId).innerText=newCardBalance;
             document.getElementById('main-balance').innerText=newBalance;
-            
+
+            //!creating a new html card and appending it to the history page
             newHTML = `<div class="card lg:card-side bg-base-100 shadow-xl border">
             <div class="card-body">
               <h2 class="card-title">${inputValue} Taka is Donated for ${stringValue}, Bangladesh</h2>
@@ -96,8 +98,9 @@ const calculateOperation = function(inputId,cardId,stringInput){
           const historyContainer = document.getElementById('history-form');
           historyContainer.innerHTML+=newHTML;
 
-        
+            //!calling modal 
             my_modal.showModal();
+            //!resetting input after adding the values and operations
             resetInput(inputId);
         }
         else{
