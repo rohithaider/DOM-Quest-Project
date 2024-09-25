@@ -76,6 +76,13 @@ const calculateOperation = function(inputId,cardId,stringInput){
         if(validationCheck(inputValue)){
             const newCardBalance = cardBalance+inputValue
             const newBalance = mainBalance-inputValue;
+
+            if(newBalance===0){
+                document.getElementById('card-1-btn').disabled=true;
+                document.getElementById('card-2-btn').disabled=true;
+                document.getElementById('card-3-btn').disabled=true;
+            }
+
             
             document.getElementById(cardId).innerText=newCardBalance;
             document.getElementById('main-balance').innerText=newBalance;
