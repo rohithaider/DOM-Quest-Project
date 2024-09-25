@@ -89,7 +89,7 @@ const calculateOperation = function(inputId,cardId,stringInput){
             document.getElementById('main-balance').innerText=newBalance;
 
             //!creating a new html card and appending it to the history page
-            newHTML = `<div class="card lg:card-side bg-base-100 shadow-xl border">
+            const newHTML = `<div class="card lg:card-side bg-base-100 shadow-xl border">
             <div class="card-body">
               <h2 class="card-title">${inputValue} Taka is Donated for ${stringValue}, Bangladesh</h2>
               <p>${currentDate}</p>
