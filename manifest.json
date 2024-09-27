@@ -1,0 +1,24 @@
+{
+    "name": "Donate Bangladesh",
+    "short_name": "Donate BD",
+    "description": "A donation platform to support causes in Bangladesh.",
+    "start_url": "./index.html",
+    "scope": "/",
+    "display": "standalone",
+    "background_color": "#F9F7F3",
+    "theme_color": "#B4F461",
+    "orientation": "portrait",
+    "icons": [
+      {
+        "src": "./assets/mobile.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      },
+      {
+        "src": "./assets/mobile.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

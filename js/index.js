@@ -154,3 +154,55 @@ document.getElementById('donation-btn').addEventListener('click',function(){
     document.getElementById('history-form').classList.add('hidden');
     document.querySelector('footer').classList.remove('hidden');
 })
+
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register('/sw.js').then(function(registration) {
+        console.log('Service Worker registered with scope:', registration.scope);
+      }, function(err) {
+        console.log('Service Worker registration failed:', err);
+      });
+    });
+  }
+
+  
+  let deferredPrompt; // Store the event for later use
+const installButton = document.getElementById('install-btn');
+
+//code for mobile installation
+
+// Hide the install button initially
+installButton.style.display = 'none';
+
+// Listen for the `beforeinstallprompt` event
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent the mini-infobar from appearing on mobile
+  e.preventDefault();
+  // Save the event so it can be triggered later
+  deferredPrompt = e;
+  // Show the install button
+  installButton.style.display = 'block';
+
+  installButton.addEventListener('click', () => {
+    // Hide the button once the prompt is triggered
+    // installButton.style.display = 'none';
+    // Show the install prompt
+    deferredPrompt.prompt();
+    // Wait for the user to respond to the prompt
+    deferredPrompt.userChoice.then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the install prompt');
+      } else {
+        console.log('User dismissed the install prompt');
+      }
+      // Clear the deferredPrompt variable since it can't be used again
+      deferredPrompt = null;
+    });
+  });
+});
+
+// Optionally, listen for the app being installed
+window.addEventListener('appinstalled', () => {
+  console.log('PWA was installed');
+});
